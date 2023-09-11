@@ -18,8 +18,8 @@ export enum Icons {
 
   MySQL = ' ',
   PostgreSQL = ' ',
-  MongoDB = " ",
-  Redis = " ",
+  MongoDB = ' ',
+  Redis = ' ',
 
   AWS = '󰸏 ',
   Git = '󰊢 ',
@@ -35,8 +35,8 @@ export enum Icons {
   NPM = '󰛷 ',
   Yarn = ' ',
   Cargo = '󱘗 ',
-  NeoVim = " ",
-  VSCode = "󰨞 ",
-  
-  TailwindCSS = "󱏿 ",
+  NeoVim = ' ',
+  VSCode = '󰨞 ',
+
+  TailwindCSS = '󱏿 ',
 }
