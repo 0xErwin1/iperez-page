@@ -129,7 +129,7 @@ function App() {
               className="rounded-full w-32 mx-auto mb-4 shadow-2xl"
             />
             <h1 className="text-2xl mb-4 text-yellow items-center">
-              Hello, I'm Ignacio Perez
+              Hi, I'm Ignacio Perez
             </h1>
             <p className="text-yellow">Software Developer</p>
           </div>
