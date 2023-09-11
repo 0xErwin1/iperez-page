@@ -32,7 +32,12 @@ export default {
       "docker-color": "#2496ED",
       "sql-color": "#F29111",
       "react-color": "#61DAFB",
+      "c-color": "#A8B9CC",
+      "cpp-color": "#00599C",
       
+      // Frameworks
+      "spring-color": "#6DB33F",
+
       // Social 
       "github-color": "#181717",
       "twitter-color": "#1DA1F2",
@@ -60,6 +65,12 @@ export default {
       "raspberry-color": "#C51A4A",
       "yarn-color": "#2C8EBB",
       "npm-color": "#CB3837",
+      
+      // Database
+      "mysql-color": "#4479A1",
+      "mongo-color": "#47A248",
+      "postgres-color": "#336791",
+      "redis-color": "#DC382D",
     },
     fontFamily: {
       fira: ["Fira Code", "monospace"],

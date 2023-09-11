@@ -45,7 +45,7 @@ const links: Links[] = [
     icon: "fab fa-linkedin",
   },
   {
-    name: "Arc()",
+    name: "arc()",
     url: "https://arc.dev/@ignacioperez_",
     color: "text-arc-color",
     icon: "",
@@ -84,7 +84,7 @@ function App() {
 
         setProjects(projectFiltereds);
       } catch (error) {
-        console.error("Hubo un error al obtener los repositorios: ", error);
+        console.error(error);
       }
     };
 
@@ -98,14 +98,14 @@ function App() {
         onClose={() => setShowAbout(false)}
         titleStyle="text-2xl text-grey"
         title="About Me"
-        icon="fa fa-address-card"
+        icon="fa fa-address-card text-cyan"
       >
         <About />
       </Modal>
       <Modal
         show={showProjects}
         titleStyle="text-2xl text-grey"
-        icon="fa fa-folder"
+        icon="fa fa-folder text-green"
         onClose={() => setShowProjects(false)}
         title="Projects"
       >
@@ -114,7 +114,7 @@ function App() {
       <Modal
         show={showServerInfrastructure}
         titleStyle="text-2xl text-grey"
-        icon="fa fa-server"
+        icon="fa fa-server text-blue"
         onClose={() => setShowServerInfrastructure(false)}
         title="Server Infrastructure"
       >
@@ -135,7 +135,7 @@ function App() {
           </div>
           <div className="flex items-center justify-center">
             <button
-              className="text-blue p-2 flex items-center justify-center  hover:text-white"
+              className="text-cyan p-2 flex items-center justify-center  hover:text-white"
               onClick={() => setShowAbout(true)}
               type="button"
             >
@@ -151,7 +151,7 @@ function App() {
               Projects
             </button>
             <button
-              className="text-aws-color p-2 flex items-center justify-center  hover:text-white "
+              className="text-blue p-2 flex items-center justify-center  hover:text-white "
               onClick={() => setShowServerInfrastructure(true)}
               type="button"
             >
@@ -166,7 +166,7 @@ function App() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center text-xl mb-2 text-center p-2 hover:text-white"
+                  className="flex items-center justify-center text-xl m-2 text-center p-2 hover:text-white"
                 >
                   <i className={`${link.icon} mr-2`} />
                   <p>{link.name}</p>
