@@ -45,7 +45,7 @@ const WebAbout: React.FC = () => {
           </p>
         </li>
         <li>
-          Color theme:{" "}
+          Color palette: {" "}
           <a
             href="https://github.com/ayu-theme/"
             className=" text-grey hover:text-yellow"
