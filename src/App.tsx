@@ -79,7 +79,7 @@ function App() {
         });
 
         const projectFiltereds: ProjectGithubResponse[] = result.data.filter(
-          (project: ProjectGithubResponse) => !project.fork
+          (project: ProjectGithubResponse) => !project.fork && project.name !== "iperez-page"
         );
 
         setProjects(projectFiltereds);
