@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 
 interface ModalProps {
   show: boolean;
@@ -9,14 +9,7 @@ interface ModalProps {
   icon: string;
 }
 
-const Modal: React.FC<ModalProps> = ({
-  show,
-  onClose,
-  children,
-  title,
-  icon,
-  titleStyle
-}) => {
+const Modal: React.FC<ModalProps> = ({ show, onClose, children, title, icon, titleStyle }) => {
   const modalRef: React.RefObject<HTMLDivElement> = useRef(null);
 
   const handleClose = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -26,7 +19,7 @@ const Modal: React.FC<ModalProps> = ({
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") {
+    if (e.key === 'Escape') {
       onClose();
     }
   };
@@ -37,17 +30,17 @@ const Modal: React.FC<ModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'
       onClick={handleClose}
       onKeyDown={handleKeyDown}
     >
-      <div ref={modalRef} className="bg-white p-10 rounded-lg relative  max-w-5xl">
-        <div className="flex justify-between items-center mb-5">
+      <div ref={modalRef} className='bg-white p-10 rounded-lg relative  max-w-5xl'>
+        <div className='flex justify-between items-center mb-5'>
           <h2 className={titleStyle}>
             <i className={`${icon} mr-2`} />
             {title}
           </h2>
-          <button className="text-red text-5xl" onClick={onClose} type="button">
+          <button className='text-red text-5xl' onClick={onClose} type='button'>
             &times;
           </button>
         </div>

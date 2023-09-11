@@ -7,13 +7,18 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "start": "npx http-server ./dist"
+    "start": "serve dist -s -n -L -p $PORT",
+    "postinstall": "husky install",
+    "lint": "yarn rome check src/**/{*.ts,*.tsx}",
+    "format": "yarn rome format --write --config-path=. src/**/{*.ts,*.tsx}"
   },
   "dependencies": {
     "@octokit/core": "^5.0.0",
     "axios": "^1.5.0",
+    "husky": "^8.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "serve": "^14.2.1"
   },
   "devDependencies": {
     "@types/node": "^20.6.0",
