@@ -191,10 +191,7 @@ function App() {
   return (
     <>
       {showToast && (
-        <Toast
-          message="Command not recognized. Type :help for more information."
-          onClose={() => setShowToast(false)}
-        />
+        <Toast message="Command not recognized. Type :help for more information." />
       )}
       <Modal
         show={showWebAbout}
@@ -244,11 +241,17 @@ function App() {
       <div className="font-fira min-h-screen bg-gray flex flex-col items-center justify-center">
         <div className="p-8 bg-gray-dark shadow-2xl w-400 rounded-xl">
           <div className="flex flex-col items-center mb-10">
-            <img
-              src="https://avatars.githubusercontent.com/u/67933444?v=4"
-              alt="Ignacio Perez"
-              className="rounded-full w-32 mx-auto mb-4 shadow-2xl"
-            />
+            <button
+              className="mb-4"
+              onClick={() => setShowWebAbout(true)}
+              type="button"
+            >
+              <img
+                src="https://avatars.githubusercontent.com/u/67933444?v=4"
+                alt="Ignacio Perez"
+                className="rounded-full w-32 mx-auto mb-4 shadow-2xl"
+              />
+            </button>
             <h1 className="text-2xl mb-4 text-yellow items-center">
               Hi, I'm Ignacio Perez
             </h1>
