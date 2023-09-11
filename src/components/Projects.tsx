@@ -10,9 +10,9 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   const getLanguageColor = (language: string): string => IconsColor[language as keyof typeof IconsColor];
 
   return (
-    <div className="grid grid-cols-2 gap-1">
+    <div className="grid md:grid-cols-2 gap-1 sm:grid-cols-1">
       {projects.map((project) => (
-        <div className="p-1 rounded">
+        <div className="p-1 rounded m-2">
           <h3 className="text-lg mb-1">
             <a
               href={project.html_url}
@@ -28,9 +28,11 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           </p>
           <p className="text-sm mb-1">
             Language:{' '}
-            <label className={`${getLanguageColor(project.language)} text-lg`}>
-              {getLanguageIcon(project.language)}
-            </label>{' '}
+            <i
+              className={`nf ${getLanguageIcon(project.language)} ${getLanguageColor(
+                project.language,
+              )} text-lg`}
+            />{' '}
             {project.language}
           </p>
           {project.description ? <p className="text-xs">{project.description}</p> : ''}

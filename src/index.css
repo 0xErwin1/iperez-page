@@ -1,8 +1,5 @@
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: 'FiraNerdFont';
-  src: url('../public/fonts/FiraMonoNerdFont-Medium.otf') format('truetype');
-}

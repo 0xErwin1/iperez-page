@@ -20,5 +20,8 @@
       "trailingComma": "all",
       "semicolons": "always"
     }
+  },
+  "organizeImports": {
+    "enabled": true
   }
 }

@@ -30,11 +30,11 @@ const Modal: React.FC<ModalProps> = ({ show, onClose, children, title, icon, tit
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 overflow-y-auto"
       onClick={handleClose}
       onKeyDown={handleKeyDown}
     >
-      <div ref={modalRef} className="bg-white p-10 rounded-lg relative  max-w-5xl">
+      <div ref={modalRef} className="bg-white p-10 rounded-lg relative max-w-5xl max-h-full overflow-y-auto">
         <div className="flex justify-between items-center mb-5">
           <h2 className={titleStyle}>
             <i className={`${icon} mr-2`} />

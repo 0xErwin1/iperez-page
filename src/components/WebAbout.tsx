@@ -4,19 +4,19 @@ const WebAbout: React.FC = () => {
   return (
     <div className="">
       <p>
-        This page was made with <label className={`${IconsColor.React} text-xl`}>{Icons.React}</label>
-        React with <label className={`${IconsColor.TypeScript} text-xl`}>{Icons.TypeScript}</label>
-        Typescript and <label className={`${IconsColor.TailwindCSS} text-xl`}>{Icons.TailwindCSS}</label>
-        Tailwindcss and build with Vite. The page is hosted in <label className="text-aws-color"> </label>
-        Cloudflare pages and the source code in{' '}
+        This page was made with <i className={`nf ${Icons.React} ${IconsColor.React} text-xl`} /> React with{' '}
+        <i className={`nf ${Icons.TypeScript} ${IconsColor.TypeScript} text-xl`} /> Typescript and{' '}
+        <i className={`nf ${Icons.TailwindCSS} ${IconsColor.TailwindCSS} text-xl`} /> Tailwindcss and build
+        with Vite. The page is hosted in <i className="nf nf-fa-cloud text-aws-color" /> Cloudflare pages and
+        the source code in{' '}
         <a
           href="https://github.com/BasileusErwin/iperez-page"
           className=" text-grey hover:text-yellow"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <label className={`${IconsColor.GitHub} text-xl`}>{Icons.GitHub}</label>
-          Github <i className="fa fa-external-link text-xs" />
+          <i className={`nf ${Icons.GitHub} ${IconsColor.GitHub} text-xl`} /> Github{' '}
+          <i className="fa fa-external-link text-xs" />
         </a>
         .
       </p>

@@ -172,78 +172,81 @@ const editorList = [
 const About: React.FC = () => {
   return (
     <>
-      <p>
-        Currently, I work as a Full-Stack Web Developer with a focus more on backend using Node.js, Express,
-        and Typescript. Although I have done some frontend work with React.js, it is not my strong suit. I
-        have been using <label className="text-arch-color">{Icons.ArchLInux}</label> Arch Linux as my primary
-        operating system for over 3 years. I am interested in all low-level systems and components, and in
-        understanding how computers and programming languages work behind the scenes.
-      </p>
+      <div>
+        <p>
+          Currently, I work as a Full-Stack Web Developer with a focus more on backend using Node.js, Express,
+          and Typescript. Although I have done some frontend work with React.js, it is not my strong suit. I
+          have been using <i className={`nf ${Icons.ArchLInux} text-arch-color`} /> Arch Linux as my primary
+          operating system for over 3 years. I am interested in all low-level systems and components, and in
+          understanding how computers and programming languages work behind the scenes.
+        </p>
 
-      <div className="grid grid-cols-2 gap-4 mt-7">
-        <div>
-          <h3 className="text-xl mb-2">Languages</h3>
-          <ul className="list list-inside grid grid-cols-2">
-            {languageList.map((language) => (
-              <li className="p-1">
-                <label className={`${language.color} text-xl`}>{language.icon}</label> {language.name}
-              </li>
-            ))}
-          </ul>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-7">
+          <div>
+            <h3 className="text-xl mb-2">Languages</h3>
+            <ul className="list list-inside grid grid-cols-2">
+              {languageList.map((language) => (
+                <li className="p-1">
+                  <i className={`nf ${language.icon} ${language.color} text-lg`} /> {language.name}
+                </li>
+              ))}
+            </ul>
 
-          <h3 className="text-xl mt-5 mb-2">Tools</h3>
-          <ul className="list list-inside grid grid-cols-2">
-            {toolList.map((tool) => (
-              <li className="p-1">
-                <label className={`${tool.color} text-xl`}>{tool.icon}</label> {tool.name}
-              </li>
-            ))}
-          </ul>
+            <h3 className="text-xl mt-5 mb-2">Tools</h3>
+            <ul className="list list-inside grid grid-cols-2">
+              {toolList.map((tool) => (
+                <li className="p-1">
+                  <i className={`nf ${tool.icon} ${tool.color} text-lg`} /> {tool.name}
+                </li>
+              ))}
+            </ul>
 
-          <h3 className="text-xl mt-5 mb-2">Editors</h3>
-          <ul className="list list-inside grid grid-cols-2">
-            {editorList.map((editor) => (
-              <li className="p-1">
-                <label className={`${editor.color} text-xl`}>{editor.icon}</label> {editor.name}
-              </li>
-            ))}
-          </ul>
+            <h3 className="text-xl mt-5 mb-2">Editors</h3>
+            <ul className="list list-inside grid grid-cols-2">
+              {editorList.map((editor) => (
+                <li className="p-1">
+                  <i className={`nf ${editor.icon} ${editor.color} text-lg`} /> {editor.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xl mb-2">Frameworks</h3>
+            <ul className="list list-inside grid grid-cols-2">
+              {frameworkList.map((framework) => (
+                <li className="p-1">
+                  <i className={`nf ${framework.icon} ${framework.color} text-xl`} /> {framework.name}
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-xl mt-5">Database</h3>
+            <ul className="list list-inside grid grid-cols-2">
+              {databaseList.map((database) => (
+                <li className="p-1">
+                  <i className={`nf ${database.icon} ${database.color} text-xl`} /> {database.name}
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="text-xl mt-5 mb-2">Operating Systems</h3>
+            <ul className="list list-inside grid grid-cols-2">
+              {osList.map((os) => (
+                <li className="p-1">
+                  <i className={`nf ${os.icon} ${os.color} text-xl`} /> {os.name}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
-        <div>
-          <h3 className="text-xl mb-2">Frameworks</h3>
-          <ul className="list list-inside grid grid-cols-2">
-            {frameworkList.map((framework) => (
-              <li className="p-1">
-                <label className={`${framework.color} text-xl`}>{framework.icon}</label> {framework.name}
-              </li>
-            ))}
-          </ul>
-
-          <h3 className="text-xl mt-5">Database</h3>
-          <ul className="list list-inside grid grid-cols-2">
-            {databaseList.map((database) => (
-              <li className="p-1">
-                <label className={`${database.color} text-xl`}>{database.icon}</label> {database.name}
-              </li>
-            ))}
-          </ul>
-
-          <h3 className="text-xl mt-2 mb-2">Operating Systems</h3>
-          <ul className="list list-inside grid grid-cols-2">
-            {osList.map((os) => (
-              <li className="p-1">
-                <label className={`${os.color} text-xl`}>{os.icon}</label> {os.name}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <p className="text-[10px] text-gray mt-5">
+          **Obviously, I don't know these technologies perfectly; they are technologies that I believe I can
+          work on a project with, encountering more or fewer problems. For more assurance, check out my
+          GitHub.
+        </p>
       </div>
-
-      <p className="text-[10px] text-gray mt-5">
-        **Obviously, I don't know these technologies perfectly; they are technologies that I believe I can
-        work on a project with, encountering more or fewer problems. For more assurance, check out my GitHub.
-      </p>
     </>
   );
 };
