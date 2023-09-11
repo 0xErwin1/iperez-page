@@ -66,7 +66,7 @@ function App() {
   const [projects, setProjects] = useState<ProjectGithubResponse[]>([]);
 
   const octokit = new Octokit({
-    auth: "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",
+    auth: process.env.REACT_APP_GITHUB_TOKEN,
   });
 
   useEffect(() => {
