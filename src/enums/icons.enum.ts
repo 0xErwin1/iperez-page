@@ -35,4 +35,8 @@ export enum Icons {
   NPM = '󰛷 ',
   Yarn = ' ',
   Cargo = '󱘗 ',
+  NeoVim = " ",
+  VSCode = "󰨞 ",
+  
+  TailwindCSS = "󱏿 ",
 }

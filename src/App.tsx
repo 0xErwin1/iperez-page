@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useRef, useState } from "react";
 import Modal from "./components/Modal";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import { Octokit } from "@octokit/core";
 import ServerInfrastructure from "./components/ServerInfrastructure";
+import Help from "./components/Help";
+import Toast from "./components/Toast";
+import WebAbout from "./components/WebAbout";
 
 interface Links {
   name: string;
@@ -63,11 +66,62 @@ function App() {
   const [showProjects, setShowProjects] = useState(false);
   const [showServerInfrastructure, setShowServerInfrastructure] =
     useState(false);
+  const [isCommandMode, setCommandMode] = useState(false);
+  const [helpMode, setHelpMode] = useState(false);
+  const [showToast, setShowToast] = useState(false);
+  const [showWebAbout, setShowWebAbout] = useState(false);
+
   const [projects, setProjects] = useState<ProjectGithubResponse[]>([]);
+  const [command, setCommand] = useState("");
+  const inputRef: React.RefObject<HTMLInputElement> = useRef(null);
 
   const octokit = new Octokit({
     auth: process.env.REACT_APP_GITHUB_TOKEN,
   });
+
+  const executeCommand = (cmd: string) => {
+    switch (cmd) {
+      case "q":
+        setShowAbout(false);
+        setShowProjects(false);
+        setShowServerInfrastructure(false);
+        setHelpMode(false);
+        break;
+      case "web":
+        setShowWebAbout(true);
+        break;
+      case "help":
+      case "h":
+      case "?":
+        setHelpMode(true);
+        break;
+      case "about":
+        setShowAbout(true);
+        break;
+      case "projects":
+        setShowProjects(true);
+        break;
+      case "server":
+        setShowServerInfrastructure(true);
+        break;
+      case "github":
+        window.open(links[0].url);
+        break;
+      case "linkedin":
+        window.open(links[1].url);
+        break;
+      case "arc":
+        window.open(links[2].url);
+        break;
+      case "gitlab":
+        window.open(links[3].url);
+        break;
+      default:
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 3000);
+        break;
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -79,7 +133,8 @@ function App() {
         });
 
         const projectFiltereds: ProjectGithubResponse[] = result.data.filter(
-          (project: ProjectGithubResponse) => !project.fork && project.name !== "iperez-page"
+          (project: ProjectGithubResponse) =>
+            !project.fork && project.name !== "iperez-page"
         );
 
         setProjects(projectFiltereds);
@@ -91,8 +146,74 @@ function App() {
     fetchData();
   }, []);
 
+  const handleInputKeyDown = (e: { key: string }) => {
+    if (e.key === "Enter") {
+      executeCommand(command.slice(1));
+      setCommandMode(false);
+    }
+  };
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    console.log(event.key);
+    if (event.key === "Escape") {
+      setCommandMode(false);
+      setShowAbout(false);
+      setShowProjects(false);
+      setShowServerInfrastructure(false);
+      setHelpMode(false);
+      setShowWebAbout(false);
+    }
+
+    if (event.key === ":") {
+      setCommandMode(true);
+      setCommand("");
+    }
+  };
+
+  const handleChange = (e: { target: { value: SetStateAction<string> } }) => {
+    setCommand(e.target.value);
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isCommandMode && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isCommandMode]);
+
   return (
     <>
+      {showToast && (
+        <Toast
+          message="Command not recognized. Type :help for more information."
+          onClose={() => setShowToast(false)}
+        />
+      )}
+      <Modal
+        show={showWebAbout}
+        onClose={() => setShowWebAbout(false)}
+        titleStyle="text-2xl text-grey"
+        title="About This Page"
+        icon="fa fa-info-circle text-yellow"
+      >
+        <WebAbout />
+      </Modal>
+      <Modal
+        show={helpMode}
+        onClose={() => setHelpMode(false)}
+        titleStyle="text-2xl text-grey"
+        title="Help"
+        icon="fa fa-question-circle text-yellow"
+      >
+        <Help />
+      </Modal>
       <Modal
         show={showAbout}
         onClose={() => setShowAbout(false)}
@@ -175,6 +296,18 @@ function App() {
             ))}
           </div>
         </div>
+      </div>
+      <div className="fixed bottom-0 left-0 w-full">
+        {isCommandMode && (
+          <input
+            type="text"
+            ref={inputRef}
+            value={command}
+            onChange={handleChange}
+            onKeyDown={handleInputKeyDown}
+            className="w-full bg-gray-dark text-white p-2"
+          />
+        )}
       </div>
     </>
   );

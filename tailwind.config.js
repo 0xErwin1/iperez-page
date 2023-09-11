@@ -71,6 +71,8 @@ export default {
       "mongo-color": "#47A248",
       "postgres-color": "#336791",
       "redis-color": "#DC382D",
+      
+      "tailwind-color": "#38B2AC",
     },
     fontFamily: {
       fira: ["Fira Code", "monospace"],

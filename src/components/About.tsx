@@ -156,6 +156,19 @@ const databaseList = [
   },
 ];
 
+const editorList = [
+  {
+    name: "NeoVim",
+    icon: Icons.NeoVim,
+    color: IconsColor.NeoVim,
+  },
+  {
+    name: "VSCode",
+    icon: Icons.VSCode,
+    color: IconsColor.VSCode,
+  },
+];
+
 const About: React.FC = () => {
   return (
     <>
@@ -189,6 +202,18 @@ const About: React.FC = () => {
               <li className="p-1">
                 <label className={`${tool.color} text-xl`}>{tool.icon}</label>{" "}
                 {tool.name}
+              </li>
+            ))}
+          </ul>
+
+          <h3 className="text-xl mt-5 mb-2">Editors</h3>
+          <ul className="list list-inside grid grid-cols-2">
+            {editorList.map((editor) => (
+              <li className="p-1">
+                <label className={`${editor.color} text-xl`}>
+                  {editor.icon}
+                </label>{" "}
+                {editor.name}
               </li>
             ))}
           </ul>
