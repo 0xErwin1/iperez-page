@@ -9,10 +9,11 @@
     "preview": "vite preview",
     "start": "serve dist -s -n -L -p $PORT",
     "postinstall": "husky install",
-    "lint": "yarn rome check src/**/{*.ts,*.tsx}",
-    "format": "yarn rome format --write --config-path=. src/**/{*.ts,*.tsx}"
+    "lint": "biome check src/**/{*.ts,*.tsx}",
+    "format": "biome format --write --config-path=. src/**/{*.ts,*.tsx}"
   },
   "dependencies": {
+    "@biomejs/biome": "^1.1.2",
     "@octokit/core": "^5.0.0",
     "axios": "^1.5.0",
     "husky": "^8.0.3",
@@ -27,7 +28,6 @@
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29",
-    "rome": "^12.1.3",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"

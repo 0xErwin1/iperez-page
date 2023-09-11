@@ -1,8 +1,8 @@
 const Help: React.FC = () => {
   return (
     <>
-      <div className='grid grid-cols-2 gap-5'>
-        <ul className='mr-5'>
+      <div className="grid grid-cols-2 gap-5">
+        <ul className="mr-5">
           <li>
             <strong>help | h | ?</strong> - Show this help
           </li>
