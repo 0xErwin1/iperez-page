@@ -86,6 +86,7 @@ function App() {
         setShowProjects(false);
         setShowServerInfrastructure(false);
         setHelpMode(false);
+        setShowWebAbout(false);
         break;
       case "web":
         setShowWebAbout(true);
