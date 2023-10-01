@@ -10,7 +10,7 @@ export enum Icons {
   SQL = 'nf-md-database',
   Lua = 'nf-md-language_lua',
   C = 'nf-custom-c',
-  Cpp = 'nf-custom-cpp',
+  'C++' = 'nf-custom-cpp',
 
   Linux = 'nf-cod-terminal_linux',
   ArchLInux = 'nf-linux-archlinux',

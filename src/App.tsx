@@ -84,7 +84,7 @@ function App() {
       case 'q':
         setShowAbout(false);
         setShowProjects(false);
-        setShowServerInfrastructure(false);
+        // setShowServerInfrastructure(false);
         setHelpMode(false);
         setShowWebAbout(false);
         break;
@@ -102,9 +102,9 @@ function App() {
       case 'projects':
         setShowProjects(true);
         break;
-      case 'server':
-        setShowServerInfrastructure(true);
-        break;
+      // case 'server':
+      //   setShowServerInfrastructure(true);
+      //   break;
       case 'github':
         window.open(links[0].url);
         break;
@@ -159,7 +159,7 @@ function App() {
       setCommandMode(false);
       setShowAbout(false);
       setShowProjects(false);
-      setShowServerInfrastructure(false);
+      // setShowServerInfrastructure(false);
       setHelpMode(false);
       setShowWebAbout(false);
     }
@@ -229,7 +229,7 @@ function App() {
       >
         <Projects projects={projects} />
       </Modal>
-      <Modal
+      {/* <Modal
         show={showServerInfrastructure}
         titleStyle='text-2xl text-grey'
         icon='fa fa-server text-blue'
@@ -237,7 +237,7 @@ function App() {
         title='Server Infrastructure'
       >
         <ServerInfrastructure />
-      </Modal>
+      </Modal> */}
       <div className='font-fira min-h-screen bg-gray flex flex-col items-center justify-center'>
         <div className='p-8 bg-gray-dark shadow-2xl rounded-xl w-500 max-sm:w-400'>
           <div className='flex flex-col items-center mb-10'>
@@ -274,14 +274,14 @@ function App() {
               <i className='fa fa-folder p-1 mr-1' />
               Projects
             </button>
-            <button
+            {/* <button
               className='text-blue p-2 flex items-center justify-center  hover:text-white '
               onClick={() => setShowServerInfrastructure(true)}
               type='button'
             >
               <i className='fa fa-server p-1 mr-1' />
               Server Infrastructure
-            </button>
+            </button> */}
           </div>
           <div className='grid grid-cols-2 mt-10 max-sm:grid-cols-1'>
             {links.map((link: Links) => (

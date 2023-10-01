@@ -10,7 +10,7 @@ export enum IconsColor {
   Python = 'text-python-color',
   Lua = 'text-lua-color',
   C = 'text-c-color',
-  Cpp = 'text-cpp-color',
+  'C++' = 'text-cpp-color',
 
   Node = 'text-node-color',
   React = 'text-react-color',
