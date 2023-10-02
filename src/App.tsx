@@ -4,7 +4,7 @@ import About from './components/About';
 import Help from './components/Help';
 import Modal from './components/Modal';
 import Projects from './components/Projects';
-import ServerInfrastructure from './components/ServerInfrastructure';
+//import ServerInfrastructure from './components/ServerInfrastructure';
 import Toast from './components/Toast';
 import WebAbout from './components/WebAbout';
 
@@ -64,8 +64,8 @@ const links: Links[] = [
 function App() {
   const [showAbout, setShowAbout] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
-  const [showServerInfrastructure, setShowServerInfrastructure] =
-    useState(false);
+  // const [showServerInfrastructure, setShowServerInfrastructure] =
+  //   useState(false);
   const [isCommandMode, setCommandMode] = useState(false);
   const [helpMode, setHelpMode] = useState(false);
   const [showToast, setShowToast] = useState(false);
