@@ -1,0 +1,198 @@
+{
+  "name": "Ignacio Perez",
+  "label": "Backend developer / Amateur Low-Level Programmer",
+  "summary": [
+    "I am a Backend-Oriented Full-Stack Web Developer with a strong focus on Node.js, Express, and TypeScript. While I have experience in frontend development with React.js, my passion lies in backend systems and infrastructure.",
+    "For over three years, Linux has been my primary operating system, and I feel at home navigating and managing Linux environments. My interests extend to low-level programming, systems architecture, and understanding how computers and programming languages work at their core.",
+    "I am always eager to learn and grow, whether by diving into the intricacies of compilers, exploring new programming paradigms, or contributing to robust and efficient software solutions. My ultimate goal is to combine my love for software development with my curiosity for low-level systems to make impactful contributions to the tech world."
+  ],
+  "image": "/profile.webp",
+  "email": "ignacio@feuer.me",
+  "profiles": [
+    {
+      "name": "GitHub",
+      "username": "0xErwin1",
+      "url": "https://github.com/0xErwin1",
+      "icon": "faGithub",
+      "class": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "username": "ignacio-perez-camejo",
+      "url": "https://www.linkedin.com/in/ignacio-perez-camejo/",
+      "icon": "faLinkedin",
+      "class": "linkedin"
+    },
+    {
+      "name": "GitLab",
+      "username": "Arc",
+      "url": "https://gitlab.com/0xErwin",
+      "icon": "faGitlab",
+      "class": "gitlab"
+    }
+  ],
+  "work": {
+    "lable": "",
+    "items": [
+      {
+        "company": "Houlak",
+        "position": "Full-Stack Web Developer",
+        "website": "https://houlak.com",
+        "startDate": "2021-08",
+        "endDate": null,
+        "summary": "Houlak mainly works with Fintech. My orientation within the company is as a backend developer in Node.js, Express, Typescript, Sequelize, and Postgres or MariaDB, and for the development environment, I introduced the use of docker and docker-compose so that anyone in the company can be easier to raise the backend. These technologies are the main stack in the company. I also do some devops tasks with AWS and Github Actions for CI/CD."
+      }
+    ]
+  },
+  "education": {
+    "label": "I am mainly autodidact, but I do not rule out taking courses or a career in the future.",
+    "coureses": [
+      {
+        "id": "f321c847-6eec-46aa-9bd3-376840403501",
+        "name": "Full Stack Developer con JavaScript",
+        "url": "https://platzi.com/p/BasileusErwin/ruta/100-javascript-full-stack/diploma/detalle/",
+        "date": "2022-07",
+        "company": "Platzi"
+      }
+    ]
+  },
+  "language": [
+    {
+      "name": "Spanish",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": ""
+    }
+  ],
+  "project": {
+    "label": "I like making all my projects open source (MIT or GPL) because I don’t mind if anyone uses them, as long as they give proper credit.",
+    "repos": [
+      {
+        "name": "advent-of-code",
+        "description": null,
+        "url": "https://github.com/0xErwin1/advent-of-code",
+        "stars": 0,
+        "forks": 0,
+        "language": "Rust",
+        "visibility": "public",
+        "license": null,
+        "tags": [
+          "advent-of-code"
+        ]
+      },
+      {
+        "name": "allocator",
+        "description": null,
+        "url": "https://github.com/0xErwin1/allocator",
+        "stars": 0,
+        "forks": 0,
+        "language": "C",
+        "visibility": "public",
+        "license": "gpl-3.0",
+        "tags": []
+      },
+      {
+        "name": "c8-emulator",
+        "description": null,
+        "url": "https://github.com/0xErwin1/c8-emulator",
+        "stars": 0,
+        "forks": 0,
+        "language": "C",
+        "visibility": "public",
+        "license": null,
+        "tags": []
+      },
+      {
+        "name": "dotfiles",
+        "description": "My dotfiles repo",
+        "url": "https://github.com/0xErwin1/dotfiles",
+        "stars": 1,
+        "forks": 0,
+        "language": "Lua",
+        "visibility": "public",
+        "license": null,
+        "tags": [
+          "archlinux",
+          "bspwm",
+          "dotfiles",
+          "nvim"
+        ]
+      },
+      {
+        "name": "expenses-manager-backend",
+        "description": "This was a simple project for managing my expenses. The goal is to have a project in my portfolio and use it for my personal expenses.",
+        "url": "https://github.com/0xErwin1/expenses-manager-backend",
+        "stars": 1,
+        "forks": 0,
+        "language": "TypeScript",
+        "visibility": "public",
+        "license": null,
+        "tags": [
+          "database",
+          "expenses-manager",
+          "expressjs",
+          "nodejs",
+          "postgresql",
+          "redis",
+          "typescript"
+        ]
+      },
+      {
+        "name": "langton.zig",
+        "description": "Langton's ant made in Zig and Raylib",
+        "url": "https://github.com/0xErwin1/langton.zig",
+        "stars": 0,
+        "forks": 0,
+        "language": "Zig",
+        "visibility": "public",
+        "license": "gpl-3.0",
+        "tags": [
+          "langton-ant",
+          "raylib",
+          "raylib-zig",
+          "zig"
+        ]
+      },
+      {
+        "name": "pong-rs",
+        "description": "Simple pong game wrote in Rust",
+        "url": "https://github.com/0xErwin1/pong-rs",
+        "stars": 0,
+        "forks": 0,
+        "language": "Rust",
+        "visibility": "public",
+        "license": null,
+        "tags": []
+      },
+      {
+        "name": "task_manager",
+        "description": null,
+        "url": "https://github.com/0xErwin1/task_manager",
+        "stars": 0,
+        "forks": 0,
+        "language": "C",
+        "visibility": "public",
+        "license": null,
+        "tags": []
+      },
+      {
+        "name": "ignis",
+        "description": "Ignis is a programming language created by me.",
+        "url": "https://github.com/Ignis-lang/ignis",
+        "stars": 0,
+        "forks": 0,
+        "language": "Rust",
+        "visibility": "public",
+        "license": "gpl-3.0",
+        "tags": [
+          "language",
+          "programming-language",
+          "rust",
+          "compiler"
+        ]
+      }
+    ]
+  }
+}

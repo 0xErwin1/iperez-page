@@ -1,0 +1,128 @@
+---
+import Section from './Section.astro';
+import cv from '@/cv';
+
+import { library, icon } from '@fortawesome/fontawesome-svg-core';
+import { faLinkedin, faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
+
+library.add(faLinkedin, faGithub, faGitlab);
+
+const icons = {
+  faLinkedin: icon({ prefix: 'fab', iconName: 'linkedin' }),
+  faGithub: icon({ prefix: 'fab', iconName: 'github' }),
+  faGitlab: icon({ prefix: 'fab', iconName: 'gitlab' }),
+};
+
+const { name, label, image, profiles } = cv;
+---
+
+<Section>
+  <div class="container">
+    <div class="info">
+      <h1>{name}</h1>
+      <h2>{label}</h2>
+    <footer>
+    {
+      profiles.map((profile) => (
+        <a
+          href={profile.url}
+          title={`Visit ${profile.username}'s profile on ${profile.name}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class={profile.class}
+        >
+          <Fragment set:html={icons[profile.icon].html} />
+        </a>
+      ))
+    }
+    </footer>
+    </div>
+    <figure>
+      <img src={image} alt={name} />
+    </figure>
+  </div>
+</Section>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-right: 32px;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 2rem;
+    color: #FFAA33;
+  }
+
+  h2 {
+    margin: 0;
+    color: #FFAD66;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 128px;
+    border-radius: 20px;
+  }
+
+  footer {
+    margin-top: 8px;
+    display: flex;
+    gap: 4px;
+  }
+
+  footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    height: 42px;
+    width: 42px;
+    font-size: 1.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  footer a:hover {
+    color: #fff;
+  }
+
+  @media (width <= 710px) {
+    .container {
+      flex-direction: column-reverse;
+      align-items: center; 
+    }
+
+    .info {
+      justify-content: center;
+      align-items: center;
+      padding-right: 0;
+      text-align: center;
+    }
+
+    figure {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem auto auto auto;
+    }
+
+    h2 {
+      text-wrap: balance;
+    }
+  }
+</style>

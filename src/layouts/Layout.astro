@@ -1,22 +1,44 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ignacio Perez's personal website</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+body {
+  background-color: #2E3440;
+  color: #ffffff;
+  font-family: Fira Code, monospace;
+}
+
+.svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+  display: inline-block;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.github {
+  color: #181717;
+}
+
+.linkedin {
+  color: #0077B5;
+}
+
+.gitlab {
+  color: #FCA121;
+}
+
 </style>
