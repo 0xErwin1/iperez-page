@@ -1,0 +1,182 @@
+---
+import Section from '@/components/Section.astro';
+import cv from '@/cv.json';
+import { Icons, IconsColor } from '@/enums/icons.enum';
+---
+
+<Section title="Work experience" titleClass="experience-title">
+  <ul>
+    {
+      cv.work.items.map((item) => {
+        const startDate = new Date(item.startDate);
+        const endDate = item.endDate && new Date(item.endDate);
+
+        const startYear = startDate.getFullYear();
+        const endYear = endDate ? endDate.getFullYear() : "Current";
+
+        return (
+          <li>
+            <article>
+              <header>
+                <div class="company-info">
+                  <div class="company-line">
+                    <h3>{item.company}</h3>
+                    <div class="links">
+                      { item.website && (
+                        <a
+                          href={item.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i class={`nf ${Icons.WEBSITE} ${IconsColor.WEBSITE}`} />
+                        </a>
+                      )}
+                      { item.linkedin && (
+                        <a
+                          href={item.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i class={`nf ${Icons.LINKEDIN} ${IconsColor.LINKEDIN}`} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+
+                  <h4>{item.position}</h4>
+                </div>
+
+                <div>
+                  <time datetime={item.startDate} data-title={item.startDate}>
+                    {startYear}
+                  </time>
+                  {" - "}
+                  <time datetime={item.endDate ?? ""} data-title={item.endDate ?? ""}>
+                    {endYear}
+                  </time>
+                </div>
+              </header>
+
+              <footer>
+                <p>{item.summary}</p>
+              </footer>
+            </article>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+article h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+article h4 {
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.company-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.links {
+  display: flex;
+  height: 24px;
+  width: 24px;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.links i {
+  font-size: 1.3rem;
+  padding-left: 0.25rem;
+}
+
+article a {
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: none;
+  color: var(--white);
+}
+
+time {
+  font-size: 0.85rem;
+  min-width: 100px;
+  position: relative;
+  cursor: default;
+}
+
+[data-title]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+[data-title]::after {
+  content: attr(data-title);
+  background-color: #333;
+  font-size: 0.75rem;
+  position: absolute;
+  padding: 0.2rem 0.5rem;
+  bottom: -1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  box-shadow: 1px 1px 1px #222;
+  opacity: 0;
+  border: 1px solid #111;
+  z-index: 99999;
+  visibility: hidden;
+  border-radius: 6px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+footer p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (width <= 720px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  time {
+    text-align: left;
+    min-width: auto;
+  }
+}
+</style>
