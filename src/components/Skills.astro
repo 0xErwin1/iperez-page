@@ -34,6 +34,12 @@ import { Icons, IconsColor } from '@/enums/icons.enum';
     border-radius: 6px;
     padding: 0.5rem 1rem;
     font-weight: 500;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
   }
 
   li i {
