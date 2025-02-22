@@ -129,11 +129,14 @@
     "repos": [
       {
         "name": "advent-of-code",
-        "description": null,
+        "description": "Collection of Advent of Code solutions",
         "url": "https://github.com/0xErwin1/advent-of-code",
         "stars": 0,
         "forks": 0,
-        "language": "Rust",
+        "language": {
+          "name": "Rust",
+          "icon": "RUST"
+        },
         "visibility": "public",
         "license": null,
         "tags": [
@@ -142,25 +145,39 @@
       },
       {
         "name": "allocator",
-        "description": null,
+        "description": "A simple allocator written in C",
         "url": "https://github.com/0xErwin1/allocator",
         "stars": 0,
         "forks": 0,
-        "language": "C",
+        "language": {
+          "name": "C",
+          "icon": "C"
+        },
         "visibility": "public",
         "license": "gpl-3.0",
-        "tags": []
+        "tags": [
+          "allocator",
+          "c",
+          "memory"
+        ]
       },
       {
         "name": "c8-emulator",
-        "description": null,
+        "description": "Simple C8 emulator written in C",
         "url": "https://github.com/0xErwin1/c8-emulator",
         "stars": 0,
         "forks": 0,
-        "language": "C",
+        "language": {
+          "name": "C",
+          "icon": "C"
+        },
         "visibility": "public",
         "license": null,
-        "tags": []
+        "tags": [
+          "c8-emulator",
+          "emulator",
+          "c8"
+        ]
       },
       {
         "name": "dotfiles",
@@ -184,7 +201,10 @@
         "url": "https://github.com/0xErwin1/expenses-manager-backend",
         "stars": 1,
         "forks": 0,
-        "language": "TypeScript",
+        "language": {
+          "name": "TypeScript",
+          "icon": "TYPESCRIPT"
+        },
         "visibility": "public",
         "license": null,
         "tags": [
@@ -203,7 +223,10 @@
         "url": "https://github.com/0xErwin1/langton.zig",
         "stars": 0,
         "forks": 0,
-        "language": "Zig",
+        "language": {
+          "name": "Zig",
+          "icon": "ZIG"
+        },
         "visibility": "public",
         "license": "gpl-3.0",
         "tags": [
@@ -215,25 +238,40 @@
       },
       {
         "name": "pong-rs",
-        "description": "Simple pong game wrote in Rust",
+        "description": "Simple pong game wrote in Rust and SDL2",
         "url": "https://github.com/0xErwin1/pong-rs",
         "stars": 0,
         "forks": 0,
-        "language": "Rust",
+        "language": {
+          "name": "Rust",
+          "icon": "RUST"
+        },
         "visibility": "public",
         "license": null,
-        "tags": []
+        "tags": [
+          "pong",
+          "pong-rs",
+          "rust",
+          "sdl2"
+        ]
       },
       {
         "name": "task_manager",
-        "description": null,
+        "description": "A simple task warrior clone written in C",
         "url": "https://github.com/0xErwin1/task_manager",
         "stars": 0,
         "forks": 0,
-        "language": "C",
+        "language": {
+          "name": "C",
+          "icon": "C"
+        },
         "visibility": "public",
         "license": null,
-        "tags": []
+        "tags": [
+          "task-manager",
+          "c",
+          "task-warrior"
+        ]
       },
       {
         "name": "ignis",
@@ -241,7 +279,10 @@
         "url": "https://github.com/Ignis-lang/ignis",
         "stars": 0,
         "forks": 0,
-        "language": "Rust",
+        "language":{
+          "name": "Rust",
+          "icon": "RUST"
+        },
         "visibility": "public",
         "license": "gpl-3.0",
         "tags": [

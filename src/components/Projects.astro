@@ -1,0 +1,185 @@
+---
+import Section from '@/components/Section.astro';
+import cv from '@/cv';
+import { Icons, IconsColor } from '@/enums/icons.enum';
+
+const { project } = cv;
+---
+
+<Section title="Projects" titleClass="project-title">
+  {project.label && (
+    <p class="project-label">{project.label}</p>
+  )}
+
+  <div class="project-grid">
+    {
+      project.repos.map((item) => {
+        return (
+          <div class="project-card">
+            <header>
+              <h3>{item.name}</h3>
+              <span class={`badge ${item.visibility}`}>{item.visibility}</span>
+            </header>
+
+            <p class="description">{item.description}</p>
+
+            <div class="meta">
+              <span><i class="nf nf-fa-star start" /> {item.stars}</span>
+              <span><i class="nf nf-fa-code_fork forks" /> {item.forks}</span>
+              <span><i class={`nf ${Icons[item.language.icon]} ${IconsColor[item.language.icon]}`} /> {item.language.name}</span>
+              {item.license && <span><i class="nf nf-fa-balance_scale" /> {item.license}</span>}
+            </div>
+
+            {item.tags.length > 0 && (
+              <ul class="tags">
+                {item.tags.map((tag) => (
+                  <li>{tag}</li>
+                ))}
+              </ul>
+            )}
+
+            <footer>
+              <a href={item.url} target="_blank" rel="noreferrer">
+                <i class={`nf nf-fa-external_link`} />
+                View Repo
+              </a>
+            </footer>
+          </div>
+        );
+      })
+    }
+  </div>
+</Section>
+
+<style>
+.project-label {
+  font-size: 0.85rem;
+  margin: 0.25rem 0 1rem;
+  font-style: italic;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: var(--gray-mirage);
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.project-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.badge {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  text-transform: capitalize;
+}
+
+.badge.public {
+  background-color: var(--green);
+}
+.badge.private {
+  background-color: var(--red);
+}
+
+.description {
+  font-size: 0.95rem;
+  min-height: 5rem
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  min-height: 2rem;
+}
+
+.meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.5rem;
+}
+
+.meta i {
+  margin-right: 0.2rem;
+}
+
+.start {
+  color: var(--yellow);
+}
+
+.forks {
+  color: var(--green);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-height: 2rem;
+}
+
+.tags li {
+  background: var(--gray-mirage-lighter);
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--yellow);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

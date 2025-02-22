@@ -19,3 +19,7 @@
 .education-title {
   color: var(--yellow-mirage);
 }
+
+.project-title {
+  color: var(--green);
+}

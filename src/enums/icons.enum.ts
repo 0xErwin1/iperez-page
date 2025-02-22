@@ -11,6 +11,7 @@ export enum Icons {
   LUA = 'nf-md-language_lua',
   C = 'nf-custom-c',
   'C++' = 'nf-custom-cpp',
+  ZIG = 'nf-seti-zig',
 
   LINUX = 'nf-cod-terminal_linux',
   ARCH_LINUX = 'nf-linux-archlinux',
@@ -55,6 +56,7 @@ export enum IconsColor {
   LUA = 'text-lua-color',
   C = 'text-c-color',
   'C++' = 'text-cpp-color',
+  ZIG = 'text-zig-color',
 
   NODE = 'text-node-color',
   REACT = 'text-react-color',

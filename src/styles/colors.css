@@ -31,6 +31,7 @@
   --react-color: #61DAFB;
   --c-color: #A8B9CC;
   --cpp-color: #00599C;
+  --zig-color: #f7a41d;
   
   /* Frameworks */
   --spring-color: #6DB33F;
@@ -233,4 +234,8 @@
 
 .text-website-color {
   color: var(--white);
+}
+
+.text-zig-color {
+  color: var(--zig-color);
 }
