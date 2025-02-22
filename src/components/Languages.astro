@@ -1,0 +1,34 @@
+---
+import Section from '@/components/Section.astro';
+import cv from '@/cv';
+
+const { language } = cv;
+---
+
+<Section title="Languages" titleClass="language-title">
+  {
+    language.map((language) => (
+      <ul>
+        <text>{language.name} - {language.level}</text>
+      </ul>
+    ))
+  }
+</Section>
+
+<style>
+  text {
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    gap: 4px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0.5rem;
+  }
+</style>
+
+
