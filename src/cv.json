@@ -102,12 +102,14 @@
   },
   "education": {
     "label": "I am mainly autodidact, but I do not rule out taking courses or a career in the future.",
-    "coureses": [
+    "certificates": [
       {
         "id": "f321c847-6eec-46aa-9bd3-376840403501",
-        "name": "Full Stack Developer con JavaScript",
+        "name": "Full Stack Developer with JavaScript",
         "url": "https://platzi.com/p/BasileusErwin/ruta/100-javascript-full-stack/diploma/detalle/",
         "date": "2022-07",
+        "startDate": null,
+        "endDate": null,
         "company": "Platzi"
       }
     ]

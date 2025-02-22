@@ -12,8 +12,10 @@
   color: var(--green);
 }
 
-
 .language-title {
   color: var(--cyan);
 }
 
+.education-title {
+  color: var(--yellow-mirage);
+}
