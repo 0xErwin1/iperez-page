@@ -5,10 +5,15 @@ import cv from '@/cv';
 ---
 
 <Section title="About" titleClass="about-title">
-  {cv.summary.map((summary) => (
-    <p>{summary}</p>
-  ))}
+  <div class="about">
+    {cv.summary.map((summary) => (
+      <p>{summary}</p>
+    ))}
+  </div>
 </Section>
 
 <style>
+.about {
+  line-height: 1.6;
+}
 </style>
