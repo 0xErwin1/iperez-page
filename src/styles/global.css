@@ -1,0 +1,13 @@
+@import './colors.css';
+
+.skills-title {
+  color: var(--cyan-mirage);
+}
+
+.about-title {
+  color: var(--yellow-mirage);
+}
+
+.experience-title {
+  color: var(--green);
+}

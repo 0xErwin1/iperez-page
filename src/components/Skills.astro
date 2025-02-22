@@ -1,0 +1,47 @@
+---
+import Section from '@/components/Section.astro';
+import cv from '@/cv.json';
+import { Icons, IconsColor } from '@/enums/icons.enum';
+---
+
+<Section title="Skills" titleClass="skills-title">
+  <ul>
+    {
+      cv.skills.map((skill) => (
+        <li>
+          <i class={`nf ${Icons[skill.icon]} ${IconsColor[skill.icon]}`} />
+          <span>{skill.name}</span>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    background: var(--gray-mirage);
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+  }
+
+  li i {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  li span {
+    margin-left: 1rem;
+  }
+</style>

@@ -13,22 +13,77 @@
       "name": "GitHub",
       "username": "0xErwin1",
       "url": "https://github.com/0xErwin1",
-      "icon": "faGithub",
-      "class": "github"
+      "icon": "GITHUB"
+    },
+    {
+      "name": "GitLab",
+      "username": "0xErwin",
+      "url": "https://gitlab.com/0xErwin",
+      "icon": "GITLAB"
     },
     {
       "name": "LinkedIn",
       "username": "ignacio-perez-camejo",
       "url": "https://www.linkedin.com/in/ignacio-perez-camejo/",
-      "icon": "faLinkedin",
-      "class": "linkedin"
+      "icon": "LINKEDIN"
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "icon": "JAVASCRIPT"
     },
     {
-      "name": "GitLab",
-      "username": "Arc",
-      "url": "https://gitlab.com/0xErwin",
-      "icon": "faGitlab",
-      "class": "gitlab"
+      "name": "TypeScript",
+      "icon": "TYPESCRIPT"
+    },
+    {
+      "name": "Rust",
+      "icon": "RUST"
+    },
+    {
+      "name": "C",
+      "icon": "C"
+    },
+    {
+      "name": "AWS",
+      "icon": "AWS"
+    },
+    {
+      "name": "Docker",
+      "icon": "DOCKER"
+    },
+    {
+      "name": "Github Actions",
+      "icon": "GITHUB"
+    },
+    {
+      "name": "Git",
+      "icon": "GIT"
+    },
+    {
+      "name": "Linux",
+      "icon": "LINUX"
+    },
+    {
+      "name": "Bash",
+      "icon": "SHELL"
+    },
+    {
+      "name": "PostgreSQL",
+      "icon": "POSTGRE_SQL"
+    },
+    {
+      "name": "Redis",
+      "icon": "REDIS"
+    },
+    {
+      "name": "MySQL",
+      "icon": "MY_SQL"
+    },
+    {
+      "name": "MongoDB",
+      "icon": "MONGO_DB"
     }
   ],
   "work": {
@@ -38,6 +93,7 @@
         "company": "Houlak",
         "position": "Full-Stack Web Developer",
         "website": "https://houlak.com",
+        "linkedin": "https://www.linkedin.com/company/houlakdev",
         "startDate": "2021-08",
         "endDate": null,
         "summary": "Houlak mainly works with Fintech. My orientation within the company is as a backend developer in Node.js, Express, Typescript, Sequelize, and Postgres or MariaDB, and for the development environment, I introduced the use of docker and docker-compose so that anyone in the company can be easier to raise the backend. These technologies are the main stack in the company. I also do some devops tasks with AWS and Github Actions for CI/CD."

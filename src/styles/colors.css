@@ -1,0 +1,236 @@
+* {
+  --gray-dark: #1F2932;
+  --gray-light: #E4E4E7;
+  --gray: #253340;
+  --gray-mirage: #2E3440;
+  --gray-mirage-light: #3B4252;
+  --gray-mirage-lighter: #434C5E;
+  --yellow: #FFAA33;
+  --yellow-mirage: #FFAD66;
+  --white: #ffffff;
+  --green: #6CBF43;
+  --red: #E65050;
+  --red-mirage: #FF6666;
+  --cyan: #00FFFF;
+  --cyan-mirage: #66FFFF;
+  --blue: #66CCFF;
+  --blue-dark: #1A1A2E;
+  --blue-dark-mirage: #1A1A2E;
+
+  /* Lenguage */
+  --js-color: #F7DF1E;
+  --ts-color: #007ACC;
+  --python-color: #306998;
+  --rust-color: #FF5800;
+  --lua-color: #0000FF;
+  --vue-color: #42b883;
+  --shell-color: #89e051;
+  --java-color: #FF0000;
+  --docker-color: #2496ED;
+  --sql-color: #F29111;
+  --react-color: #61DAFB;
+  --c-color: #A8B9CC;
+  --cpp-color: #00599C;
+  
+  /* Frameworks */
+  --spring-color: #6DB33F;
+  
+  /* Social  */
+  --github-color: #181717;
+  --twitter-color: #1DA1F2;
+  --linkedin-color: #0077B5;
+  --instagram-color: #E1306C;
+  --youtube-color: #FF0000;
+  --twitch-color: #9146FF;
+  --discord-color: #7289DA;
+  --reddit-color: #FF4500;
+  --arc-color: #2962FF;
+  --aws-color: #FF9900;
+  --gitlab-color: #FCA121;
+  
+  /* System */
+  --arch-color: #1793D1;
+  --linux-color: #FCC624;
+  --windows-color: #0078D6;
+  
+  /* Tools */
+  --vscode-color: #007ACC;
+  --vim-color: #019733;
+  --git-color: #F05032;
+  --node-color: #339933;
+  --orange-color: #FFA500;
+  --raspberry-color: #C51A4A;
+  --yarn-color: #2C8EBB;
+  --npm-color: #CB3837;
+  
+  /* Database */
+  --mysql-color: #4479A1;
+  --mongo-color: #47A248;
+  --postgres-color: #336791;
+  --redis-color: #DC382D;
+  --tailwind-color: #38B2AC;
+}
+
+.text-js-color {
+  color: var(--js-color);
+}
+
+.text-ts-color {
+  color: var(--ts-color);
+}
+
+.text-python-color {
+  color: var(--python-color);
+}
+
+.text-rust-color {
+  color: var(--rust-color);
+}
+
+.text-lua-color {
+  color: var(--lua-color);
+}
+
+.text-vue-color {
+  color: var(--vue-color);
+}
+
+.text-shell-color {
+  color: var(--shell-color);
+}
+
+.text-java-color {
+  color: var(--java-color);
+}
+
+.text-docker-color {
+  color: var(--docker-color);
+}
+
+.text-sql-color {
+  color: var(--sql-color);
+}
+
+.text-react-color {
+  color: var(--react-color);
+}
+
+.text-c-color {
+  color: var(--c-color);
+}
+
+.text-cpp-color {
+  color: var(--cpp-color);
+}
+
+.text-spring-color {
+  color: var(--spring-color);
+}
+
+.text-github-color {
+  color: var(--github-color);
+}
+
+.text-twitter-color {
+  color: var(--twitter-color);
+}
+
+.text-linkedin-color {
+  color: var(--linkedin-color);
+}
+
+.text-instagram-color {
+  color: var(--instagram-color);
+}
+
+.text-youtube-color {
+  color: var(--youtube-color);
+}
+
+.text-twitch-color {
+  color: var(--twitch-color);
+}
+
+.text-discord-color {
+  color: var(--discord-color);
+}
+
+.text-reddit-color {
+  color: var(--reddit-color);
+}
+
+.text-gitlab-color {
+  color: var(--gitlab-color);
+}
+
+.text-arch-color {
+  color: var(--arch-color);
+}
+
+.text-linux-color {
+  color: var(--linux-color);
+}
+
+.text-windows-color {
+  color: var(--windows-color);
+}
+
+.text-vscode-color {
+  color: var(--vscode-color);
+}
+
+.text-vim-color {
+  color: var(--vim-color);
+}
+
+.text-git-color {
+  color: var(--git-color);
+}
+
+.text-node-color {
+  color: var(--node-color);
+}
+
+.text-orange-color {
+  color: var(--orange-color);
+}
+
+.text-raspberry-color {
+  color: var(--raspberry-color);
+}
+
+.text-yarn-color {
+  color: var(--yarn-color);
+}
+
+.text-npm-color {
+  color: var(--npm-color);
+}
+
+.text-mysql-color {
+  color: var(--mysql-color);
+}
+
+.text-mongo-color {
+  color: var(--mongo-color);
+}
+
+.text-postgres-color {
+  color: var(--postgres-color);
+}
+
+.text-redis-color {
+  color: var(--redis-color);
+}
+
+.text-tailwind-color {
+  color: var(--tailwind-color);
+} 
+
+.text-aws-color {
+  color: var(--aws-color);
+}
+
+.text-website-color {
+  color: var(--white);
+}
