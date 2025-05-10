@@ -10,16 +10,16 @@
   "email": "ignacio@feuer.me",
   "profiles": [
     {
-      "name": "GitHub",
-      "username": "0xErwin1",
-      "url": "https://github.com/0xErwin1",
-      "icon": "GITHUB"
-    },
-    {
       "name": "GitLab",
       "username": "0xErwin",
       "url": "https://gitlab.com/0xErwin",
       "icon": "GITLAB"
+    },
+    {
+      "name": "GitHub",
+      "username": "0xErwin1",
+      "url": "https://github.com/0xErwin1",
+      "icon": "GITHUB"
     },
     {
       "name": "LinkedIn",
@@ -42,6 +42,10 @@
       "icon": "RUST"
     },
     {
+      "name": "Go",
+      "icon": "GO"
+    },
+    {
       "name": "C",
       "icon": "C"
     },
@@ -54,12 +58,12 @@
       "icon": "DOCKER"
     },
     {
-      "name": "Github Actions",
-      "icon": "GITHUB"
-    },
-    {
       "name": "Git",
       "icon": "GIT"
+    },
+    {
+      "name": "Github Actions",
+      "icon": "GITHUB"
     },
     {
       "name": "Linux",
@@ -121,16 +125,16 @@
     },
     {
       "name": "English",
-      "level": "A2"
+      "level": "B1"
     }
   ],
   "project": {
     "label": "I like making all my projects open source (MIT or GPL) because I don’t mind if anyone uses them, as long as they give proper credit.",
     "repos": [
       {
-        "name": "advent-of-code",
-        "description": "Collection of Advent of Code solutions",
-        "url": "https://github.com/0xErwin1/advent-of-code",
+        "name": "ignis",
+        "description": "Ignis is a programming language created by me.",
+        "url": "https://gitlab.com/0xErwin/ignis",
         "stars": 0,
         "forks": 0,
         "language": {
@@ -138,15 +142,18 @@
           "icon": "RUST"
         },
         "visibility": "public",
-        "license": null,
+        "license": "gpl-3.0",
         "tags": [
-          "advent-of-code"
+          "language",
+          "programming-language",
+          "rust",
+          "compiler"
         ]
       },
       {
         "name": "allocator",
         "description": "A simple allocator written in C",
-        "url": "https://github.com/0xErwin1/allocator",
+        "url": "https://gitlab.com/0xErwin/allocator",
         "stars": 0,
         "forks": 0,
         "language": {
@@ -164,7 +171,7 @@
       {
         "name": "c8-emulator",
         "description": "Simple C8 emulator written in C",
-        "url": "https://github.com/0xErwin1/c8-emulator",
+        "url": "https://gitlab.com/0xErwin/c8-emulator",
         "stars": 0,
         "forks": 0,
         "language": {
@@ -172,7 +179,7 @@
           "icon": "C"
         },
         "visibility": "public",
-        "license": null,
+        "license": "gpl-3.0",
         "tags": [
           "c8-emulator",
           "emulator",
@@ -182,7 +189,7 @@
       {
         "name": "dotfiles",
         "description": "My dotfiles repo",
-        "url": "https://github.com/0xErwin1/dotfiles",
+        "url": "https://gitlab.com/0xErwin/dotfiles",
         "stars": 1,
         "forks": 0,
         "language": "Lua",
@@ -198,7 +205,7 @@
       {
         "name": "expenses-manager-backend",
         "description": "This was a simple project for managing my expenses. The goal is to have a project in my portfolio and use it for my personal expenses.",
-        "url": "https://github.com/0xErwin1/expenses-manager-backend",
+        "url": "https://gitlab.com/0xErwin/expenses-manager-backend",
         "stars": 1,
         "forks": 0,
         "language": {
@@ -206,7 +213,7 @@
           "icon": "TYPESCRIPT"
         },
         "visibility": "public",
-        "license": null,
+        "license": "gpl-3.0",
         "tags": [
           "database",
           "expenses-manager",
@@ -220,7 +227,7 @@
       {
         "name": "langton.zig",
         "description": "Langton's ant made in Zig and Raylib",
-        "url": "https://github.com/0xErwin1/langton.zig",
+        "url": "https://gitlab.com/0xErwin/langton.zig",
         "stars": 0,
         "forks": 0,
         "language": {
@@ -239,7 +246,7 @@
       {
         "name": "pong-rs",
         "description": "Simple pong game wrote in Rust and SDL2",
-        "url": "https://github.com/0xErwin1/pong-rs",
+        "url": "https://gitlab.com/0xErwin/pong-rs",
         "stars": 0,
         "forks": 0,
         "language": {
@@ -247,7 +254,7 @@
           "icon": "RUST"
         },
         "visibility": "public",
-        "license": null,
+        "license": "MIT",
         "tags": [
           "pong",
           "pong-rs",
@@ -258,7 +265,7 @@
       {
         "name": "task_manager",
         "description": "A simple task warrior clone written in C",
-        "url": "https://github.com/0xErwin1/task_manager",
+        "url": "https://gitlab.com/0xErwin/task_manager",
         "stars": 0,
         "forks": 0,
         "language": {
@@ -266,7 +273,7 @@
           "icon": "C"
         },
         "visibility": "public",
-        "license": null,
+        "license": "MIT",
         "tags": [
           "task-manager",
           "c",
@@ -274,22 +281,19 @@
         ]
       },
       {
-        "name": "ignis",
-        "description": "Ignis is a programming language created by me.",
-        "url": "https://github.com/Ignis-lang/ignis",
+        "name": "advent-of-code",
+        "description": "Collection of Advent of Code solutions",
+        "url": "https://gitlab.com/0xErwin/advent-of-code",
         "stars": 0,
         "forks": 0,
-        "language":{
+        "language": {
           "name": "Rust",
           "icon": "RUST"
         },
         "visibility": "public",
-        "license": "gpl-3.0",
+        "license": null,
         "tags": [
-          "language",
-          "programming-language",
-          "rust",
-          "compiler"
+          "advent-of-code"
         ]
       }
     ]

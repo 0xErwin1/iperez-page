@@ -32,6 +32,7 @@
   --c-color: #A8B9CC;
   --cpp-color: #00599C;
   --zig-color: #f7a41d;
+  --go-color: #00ADD8;
   
   /* Frameworks */
   --spring-color: #6DB33F;
@@ -122,6 +123,10 @@
 
 .text-cpp-color {
   color: var(--cpp-color);
+}
+
+.text-go-color {
+  color: var(--go-color);
 }
 
 .text-spring-color {
