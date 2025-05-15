@@ -1,6 +1,13 @@
 ---
 import '@/styles/global.css';
 import '@/styles/colors.css';
+import Navigation from '@/components/Navigation.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -10,20 +17,43 @@ import '@/styles/colors.css';
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Ignacio Perez's personal website</title>
+    <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <Navigation />
+    <div class="content-wrapper">
+      <slot />
+    </div>
   </body>
 </html>
 
 <style is:global>
 @import 'https://www.nerdfonts.com/assets/css/webfont.css';
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: var(--gray-dark);
   color: var(--white);
   font-family: Fira Code, monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  padding-top: 4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper > :global(*) {
+  flex: 1;
 }
 
 .svg-inline--fa {
@@ -33,5 +63,4 @@ body {
   height: 1em;
   vertical-align: -0.125em;
 }
-
 </style>

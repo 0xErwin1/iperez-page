@@ -50,6 +50,10 @@
       "icon": "C"
     },
     {
+      "name": "C++",
+      "icon": "CPP"
+    },
+    {
       "name": "AWS",
       "icon": "AWS"
     },
@@ -128,6 +132,52 @@
       "level": "B1"
     }
   ],
+  "books": {
+    "titel": "Books I have read or I'm reading",
+    "label": "I use my ReMarkable Paper Pro to read books. I only include technical books.",
+    "items": [
+      {
+        "title": "The Pragmatic Programmer",
+        "author": "Andrew Hunt, David Thomas",
+        "state": "FINISHED"
+      },
+      {
+        "title": "The Clean Coder",
+        "author": "Robert C. Martin",
+        "state": "PENDING"
+      },
+      {
+        "title": "Low-Level Programming in C",
+        "author": "Alexander Shvets",
+        "state": "PENDING"
+      },
+      {
+        "title": "The Art of Computer Programming",
+        "author": "Donald E. Knuth",
+        "state": "PENDING"
+      },
+      {
+        "title": "The Linux Programming Interface",
+        "author": "Michael Kerrisk",
+        "state": "PENDING"
+      },
+      {
+        "title": "The Rust Programming Language",
+        "author": "Steve Klabnik, Carol Nichols",
+        "state": "FINISHED"
+      },
+      {
+        "title": "Computer Systems: A Programmer's Perspective",
+        "author": "Randal E. Bryant, David R. O'Hallaron",
+        "state": "STARTED"
+      },
+      {
+        "title": "Dive Into DESIGN PATTERNS",
+        "author": "Alexander Shvets",
+        "state": "FINISHED"
+      }
+    ]
+  },
   "project": {
     "label": "I like making all my projects open source (MIT or GPL) because I don’t mind if anyone uses them, as long as they give proper credit.",
     "repos": [

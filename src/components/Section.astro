@@ -16,9 +16,34 @@ const { title, titleClass } = Astro.props;
     margin: 0 auto 48px;
   }
 
-  @media (width <= 700px) {
+  h1 {
+    font-size: 2rem;
+    color: var(--yellow);
+    margin: 0 0 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  /* Tablet breakpoint */
+  @media (min-width: 640px) {
     section {
-      margin-bottom: 38px;
+      margin-bottom: 56px;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+    }
+  }
+
+  /* Desktop breakpoint */
+  @media (min-width: 1024px) {
+    section {
+      margin-bottom: 64px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0 0 2rem;
     }
   }
 </style>

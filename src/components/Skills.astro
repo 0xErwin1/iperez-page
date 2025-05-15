@@ -21,7 +21,7 @@ import { Icons, IconsColor } from '@/enums/icons.enum';
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.75rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -31,23 +31,54 @@ import { Icons, IconsColor } from '@/enums/icons.enum';
     display: inline-flex;
     align-items: center;
     background: var(--gray-mirage);
-    border-radius: 6px;
-    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 0.75rem 1.25rem;
     font-weight: 500;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
   }
 
   li:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.1);
   }
 
   li i {
-    font-size: 1.5rem;
-    line-height: 1.5;
+    font-size: 1.4rem;
+    line-height: 1;
   }
 
   li span {
-    margin-left: 1rem;
+    margin-left: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--gray-light);
+  }
+
+  /* Tablet breakpoint */
+  @media (min-width: 640px) {
+    ul {
+      gap: 1rem;
+    }
+
+    li {
+      padding: 0.85rem 1.5rem;
+    }
+
+    li i {
+      font-size: 1.5rem;
+    }
+
+    li span {
+      font-size: 1rem;
+    }
+  }
+
+  /* Desktop breakpoint */
+  @media (min-width: 1024px) {
+    li:hover span {
+      color: var(--white);
+    }
   }
 </style>

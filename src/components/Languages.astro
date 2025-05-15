@@ -6,28 +6,107 @@ const { language } = cv;
 ---
 
 <Section title="Languages" titleClass="language-title">
-  {
-    language.map((language) => (
-      <ul>
-        <text>{language.name} - {language.level}</text>
-      </ul>
-    ))
-  }
+  <ul>
+    {
+      language.map((lang) => (
+        <li>
+          <span class="name">{lang.name}</span>
+          <span class="level">{lang.level}</span>
+        </li>
+      ))
+    }
+  </ul>
 </Section>
 
 <style>
-  text {
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    gap: 4px;
-  }
-
   ul {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    padding: 0.5rem;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--gray-mirage);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 0.75rem 1.25rem;
+    transition: all 0.3s ease;
+  }
+
+  li:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--yellow);
+  }
+
+  .level {
+    font-size: 1.1rem;
+    color: var(--gray-light);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Tablet breakpoint */
+  @media (min-width: 640px) {
+    li {
+      padding: 0.85rem 1.5rem;
+    }
+
+    .name {
+      font-size: 1.3rem;
+    }
+
+    .level {
+      font-size: 1.15rem;
+    }
+  }
+
+  /* Desktop breakpoint */
+  @media (min-width: 1024px) {
+    .name {
+      font-size: 1.4rem;
+    }
+
+    li:hover .level {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+    }
+
+    .level {
+      font-size: 1.2rem;
+    }
+  }
+
+  .language-title {
+    font-size: 2.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .language-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .language-title {
+      font-size: 2.75rem;
+    }
   }
 </style>
 

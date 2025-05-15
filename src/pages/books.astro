@@ -1,0 +1,248 @@
+---
+import Layout from '../layouts/Layout.astro';
+import cv from '@/cv';
+
+const { books } = cv;
+
+const groupedBooks = {
+	FINISHED: books.items.filter(book => book.state === 'FINISHED'),
+	STARTED: books.items.filter(book => book.state === 'STARTED'),
+	PENDING: books.items.filter(book => book.state === 'PENDING')
+};
+
+const stateLabels = {
+	FINISHED: 'Read Books',
+	STARTED: 'Currently Reading',
+	PENDING: 'To Read'
+};
+
+const stateColors = {
+	FINISHED: 'var(--green)',
+	STARTED: 'var(--yellow)',
+	PENDING: 'var(--yellow-mirage)'
+};
+---
+
+<Layout title="My Books">
+	<main>
+		<div class="container">
+			<h1>{books.titel}</h1>
+			{books.label && <p class="books-label">{books.label}</p>}
+
+			{['STARTED', 'FINISHED', 'PENDING'].map(state => (
+				<section class="books-section">
+					<h2>{stateLabels[state]}</h2>
+					<div class="books-grid">
+						{groupedBooks[state].map(book => (
+							<article class="book-card">
+								<header>
+									<h3>{book.title}</h3>
+									<span class="badge" style={`background-color: ${stateColors[book.state]}`}>
+										{stateLabels[book.state]}
+									</span>
+								</header>
+								<p class="author">by {book.author}</p>
+							</article>
+						))}
+					</div>
+				</section>
+			))}
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
+
+	.container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 1rem;
+		flex: 1;
+	}
+
+	h1 {
+		font-size: 2.25rem;
+		color: var(--yellow);
+		margin-bottom: 0.75rem;
+		letter-spacing: -0.5px;
+	}
+
+	.books-label {
+		font-size: 1.1rem;
+		color: var(--yellow-mirage);
+		margin-bottom: 2rem;
+		font-style: italic;
+		line-height: 1.5;
+	}
+
+	.books-section {
+		margin-bottom: 3rem;
+	}
+
+	.books-section:last-child {
+		margin-bottom: 0;
+	}
+
+	.books-section h2 {
+		font-size: 1.5rem;
+		color: var(--yellow);
+		margin-bottom: 1.5rem;
+		letter-spacing: -0.5px;
+	}
+
+	.books-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+	}
+
+	.book-card {
+		background: var(--gray-mirage);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 12px;
+		padding: 1.5rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: all 0.3s ease;
+	}
+
+	.book-card header {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		margin-bottom: 1rem;
+	}
+
+	.book-card h3 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin: 0;
+		color: var(--yellow);
+		line-height: 1.4;
+		letter-spacing: -0.5px;
+	}
+
+	.badge {
+		font-size: 0.9rem;
+		font-weight: 500;
+		padding: 0.3rem 1rem;
+		border-radius: 20px;
+		white-space: nowrap;
+		color: var(--white);
+		align-self: flex-start;
+		letter-spacing: 0.5px;
+	}
+
+	.author {
+		font-size: 1.1rem;
+		color: var(--gray-light);
+		margin: 0;
+		line-height: 1.5;
+		padding-top: 0.75rem;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+	}
+
+	/* Tablet breakpoint */
+	@media (min-width: 640px) {
+		.container {
+			padding: 2rem;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		.books-label {
+			font-size: 1.2rem;
+		}
+
+		.books-section h2 {
+			font-size: 1.75rem;
+		}
+
+		.books-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.5rem;
+		}
+
+		.book-card {
+			padding: 1.75rem;
+		}
+
+		.book-card h3 {
+			font-size: 1.35rem;
+		}
+
+		.badge {
+			font-size: 0.95rem;
+		}
+
+		.author {
+			font-size: 1.15rem;
+		}
+	}
+
+	/* Desktop breakpoint */
+	@media (min-width: 1024px) {
+		.container {
+			max-width: 1000px;
+			padding: 3rem 1rem;
+		}
+
+		h1 {
+			font-size: 2.75rem;
+		}
+
+		.books-label {
+			font-size: 1.25rem;
+		}
+
+		.books-section h2 {
+			font-size: 2rem;
+		}
+
+		.books-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.book-card header {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+
+		.book-card h3 {
+			font-size: 1.4rem;
+		}
+
+		.badge {
+			font-size: 1rem;
+		}
+
+		.author {
+			font-size: 1.2rem;
+			line-height: 1.6;
+		}
+
+		.book-card:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+			border-color: rgba(255, 255, 255, 0.1);
+		}
+
+		.book-card:hover h3 {
+			color: var(--white);
+		}
+	}
+
+	/* Large desktop breakpoint */
+	@media (min-width: 1280px) {
+		.books-grid {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+</style> 

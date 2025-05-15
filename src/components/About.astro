@@ -14,6 +14,36 @@ import cv from '@/cv';
 
 <style>
 .about {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.about p {
+  font-size: 1.15rem;
   line-height: 1.6;
+  color: var(--gray-light);
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.2px;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 640px) {
+  .about p {
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .about p {
+    font-size: 1.35rem;
+    line-height: 1.75;
+  }
 }
 </style>

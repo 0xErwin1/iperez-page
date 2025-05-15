@@ -1,0 +1,34 @@
+/* Base icon styles */
+i.nf {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  vertical-align: middle;
+  position: relative;
+  top: -0.05em; /* Fine-tune vertical alignment */
+}
+
+/* Icon sizes */
+i.nf-lg {
+  font-size: 1.2em;
+}
+
+i.nf-xl {
+  font-size: 1.5em;
+}
+
+/* Icon containers */
+.icon-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1;
+}
+
+.icon-text > span {
+  position: relative;
+  top: 0.05em; /* Fine-tune text alignment */
+} 

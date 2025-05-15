@@ -11,21 +11,21 @@ const { name, label, image, profiles } = cv;
     <div class="info">
       <h1>{name}</h1>
       <h2>{label}</h2>
-    <footer>
-    {
-      profiles.map((profile) => (
-        <a
-          href={profile.url}
-          title={`Visit ${profile.username}'s profile on ${profile.name}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          class={`${IconsColor[profile.icon]}`}
-        >
-          <i class={`nf ${Icons[profile.icon]}`} />
-        </a>
-      ))
-    }
-    </footer>
+      <footer>
+        {
+          profiles.map((profile) => (
+            <a
+              href={profile.url}
+              title={`Visit ${profile.username}'s profile on ${profile.name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`${IconsColor[profile.icon]}`}
+            >
+              <i class={`nf ${Icons[profile.icon]}`} />
+            </a>
+          ))
+        }
+      </footer>
     </div>
     <figure>
       <img src={image} alt={name} />
@@ -36,43 +36,65 @@ const { name, label, image, profiles } = cv;
 <style>
   .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
+    padding: 1.5rem 0rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .info {
     display: flex;
     flex-direction: column;
-    gap: 0.25rem;
-    padding-right: 32px;
+    gap: 0.75rem;
+    text-align: center;
+    width: 100%;
   }
 
   h1 {
-    margin-bottom: 0;
-    font-size: 2rem;
+    margin: 0;
+    font-size: 2.5rem;
     color: var(--yellow);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
   }
 
   h2 {
     margin: 0;
-    color: var(--yellow-mirage);
+    color: var(--gray-light);
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
   }
 
   img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    width: 128px;
+    width: 140px;
     border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  figure {
+    margin: 0;
   }
 
   footer {
-    margin-top: 8px;
     display: flex;
-    gap: 4px;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 0.5rem;
   }
 
   footer a {
@@ -81,40 +103,77 @@ const { name, label, image, profiles } = cv;
     justify-content: center;
     height: 42px;
     width: 42px;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   footer a:hover {
     color: var(--white);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
   }
 
-  footer i {
-    text-decoration: none;
-  }
-
-  @media (width <= 720px) {
+  /* Tablet breakpoint */
+  @media (min-width: 640px) {
     .container {
-      flex-direction: column-reverse;
-      align-items: center; 
+      padding: 2rem 1.5rem;
+      gap: 2.5rem;
     }
 
-    .info {
-      justify-content: center;
-      align-items: center;
-      padding-right: 0;
-      text-align: center;
-    }
-
-    figure {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 1rem auto auto auto;
+    h1 {
+      font-size: 2.75rem;
     }
 
     h2 {
-      text-wrap: balance;
+      font-size: 1.35rem;
+    }
+
+    img {
+      width: 160px;
+      border-radius: 24px;
+    }
+
+    footer a {
+      height: 46px;
+      width: 46px;
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Desktop breakpoint */
+  @media (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 3rem 1rem;
+      gap: 3rem;
+    }
+
+    .info {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    h1 {
+      font-size: 3.25rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    footer {
+      justify-content: flex-start;
+    }
+
+    img {
+      width: 180px;
+      border-radius: 28px;
     }
   }
 </style>

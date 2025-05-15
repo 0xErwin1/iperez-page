@@ -43,21 +43,28 @@ const { education } = cv;
 
 <style>
 .education-label {
-  font-size: 0.85rem;
-  margin: 0.25rem 0 1rem;
+  font-size: 1rem;
+  margin: 0.25rem 0 1.5rem;
   font-style: italic;
+  line-height: 1.5;
+  color: var(--gray-light);
+  letter-spacing: 0.2px;
 }
 
 .education-courses {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 0.5rem;
+  gap: 1.5rem;
+  padding: 0;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .education-courses h3 {
   color: var(--yellow);
-  margin-bottom: 0.5rem;
+  margin: 0 0 1.5rem;
+  font-size: 1.15rem;
+  letter-spacing: -0.5px;
 }
 
 ul {
@@ -66,25 +73,53 @@ ul {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
+}
+
+li article {
+  background: var(--gray-mirage);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+li article:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 li article header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .cert-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.5rem;
 }
 
 .cert-info h4 {
   margin: 0;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.cert-info h4 a {
+  color: var(--yellow);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.cert-info h4 a:hover {
+  color: var(--white);
 }
 
 .company {
@@ -97,26 +132,16 @@ li article header {
 .date-and-link {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .date-and-link time {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
+  color: var(--gray-light);
   position: relative;
   cursor: default;
-}
-
-li a {
-  text-decoration: none;
-  color: inherit;
-}
-
-li i {
-  font-size: 1rem;
-}
-
-li a:hover {
-  color: var(--white);
 }
 
 [data-title]:hover::after {
@@ -130,28 +155,88 @@ li a:hover {
   color: var(--white);
   font-size: 0.75rem;
   position: absolute;
-  padding: 0.2rem 0.5rem;
-  bottom: -1.6rem;
+  padding: 0.25rem 0.75rem;
+  bottom: -1.8rem;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  box-shadow: 1px 1px 1px #222;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   opacity: 0;
-  border: 1px solid #111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 99999;
   visibility: hidden;
-  border-radius: 6px;
-  transition: opacity 0.2s ease-in-out;
+  border-radius: 20px;
+  transition: all 0.2s ease;
 }
 
-@media (width <= 720px) {
-  li article header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
+/* Tablet breakpoint */
+@media (min-width: 640px) {
+  .education-courses {
+    padding: 0;
   }
+
+  .education-courses h3 {
+    font-size: 2rem;
+  }
+
+  .cert-info h4 {
+    font-size: 1.15rem;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+
+  .date-and-link time {
+    font-size: 0.95rem;
+  }
+
+  li article {
+    padding: 1.5rem;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .education-courses {
+    padding: 0;
+  }
+
+  li article header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cert-info {
+    max-width: 70%;
+  }
+
   .date-and-link {
-    margin-top: 0.25rem;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+.education-title {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 640px) {
+  .education-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .education-title {
+    font-size: 2.75rem;
+  }
+
+  .education-courses h3 {
+    font-size: 2.25rem;
+    margin: 0 0 2rem;
   }
 }
 </style>
