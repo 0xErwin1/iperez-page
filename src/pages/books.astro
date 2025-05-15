@@ -1,54 +1,57 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Section from '@/components/Section.astro';
 import cv from '@/cv';
 
 const { books } = cv;
 
 const groupedBooks = {
-	FINISHED: books.items.filter(book => book.state === 'FINISHED'),
-	STARTED: books.items.filter(book => book.state === 'STARTED'),
-	PENDING: books.items.filter(book => book.state === 'PENDING')
+  FINISHED: books.items.filter((book) => book.state === 'FINISHED'),
+  STARTED: books.items.filter((book) => book.state === 'STARTED'),
+  PENDING: books.items.filter((book) => book.state === 'PENDING'),
 };
 
 const stateLabels = {
-	FINISHED: 'Read Books',
-	STARTED: 'Currently Reading',
-	PENDING: 'To Read'
+  FINISHED: 'Read Books',
+  STARTED: 'Currently Reading',
+  PENDING: 'To Read',
 };
 
 const stateColors = {
-	FINISHED: 'var(--green)',
-	STARTED: 'var(--yellow)',
-	PENDING: 'var(--yellow-mirage)'
+  FINISHED: 'var(--green)',
+  STARTED: 'var(--yellow)',
+  PENDING: 'var(--yellow-mirage)',
 };
 ---
 
 <Layout title="My Books">
-	<main>
-		<div class="container">
-			<h1>{books.titel}</h1>
-			{books.label && <p class="books-label">{books.label}</p>}
+  <Section title="" >
+    <main>
+      <div class="container">
+        <h1>{books.titel}</h1>
+        {books.label && <p class="books-label">{books.label}</p>}
 
-			{['STARTED', 'FINISHED', 'PENDING'].map(state => (
-				<section class="books-section">
-					<h2>{stateLabels[state]}</h2>
-					<div class="books-grid">
-						{groupedBooks[state].map(book => (
-							<article class="book-card">
-								<header>
-									<h3>{book.title}</h3>
-									<span class="badge" style={`background-color: ${stateColors[book.state]}`}>
-										{stateLabels[book.state]}
-									</span>
-								</header>
-								<p class="author">by {book.author}</p>
-							</article>
-						))}
-					</div>
-				</section>
-			))}
-		</div>
-	</main>
+        {['STARTED', 'FINISHED', 'PENDING'].map(state => (
+        <section class="books-section">
+          <h2>{stateLabels[state]}</h2>
+          <div class="books-grid">
+            {groupedBooks[state].map(book => (
+            <article class="book-card">
+              <header>
+                <h3>{book.title}</h3>
+                <span class="badge" style={`background-color: ${stateColors[book.state]}`}>
+                  {stateLabels[book.state]}
+                </span>
+              </header>
+              <p class="author">by {book.author}</p>
+            </article>
+            ))}
+          </div>
+        </section>
+        ))}
+      </div>
+    </main>
+  </Section>
 </Layout>
 
 <style>
@@ -56,13 +59,17 @@ const stateColors = {
 		display: flex;
 		flex-direction: column;
 		min-height: 100%;
+		padding: 2rem;
 	}
 
 	.container {
 		width: 100%;
+		max-width: 1000px;
 		margin: 0 auto;
-		padding: 1rem;
 		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	h1 {
@@ -70,6 +77,7 @@ const stateColors = {
 		color: var(--yellow);
 		margin-bottom: 0.75rem;
 		letter-spacing: -0.5px;
+		text-align: center;
 	}
 
 	.books-label {
@@ -78,10 +86,13 @@ const stateColors = {
 		margin-bottom: 2rem;
 		font-style: italic;
 		line-height: 1.5;
+		text-align: center;
+		max-width: 600px;
 	}
 
 	.books-section {
 		margin-bottom: 3rem;
+		width: 100%;
 	}
 
 	.books-section:last-child {
@@ -93,6 +104,7 @@ const stateColors = {
 		color: var(--yellow);
 		margin-bottom: 1.5rem;
 		letter-spacing: -0.5px;
+		text-align: center;
 	}
 
 	.books-grid {
@@ -148,49 +160,44 @@ const stateColors = {
 
 	/* Tablet breakpoint */
 	@media (min-width: 640px) {
-		.container {
+		main {
 			padding: 2rem;
-		}
-
-		h1 {
-			font-size: 2.5rem;
-		}
-
-		.books-label {
-			font-size: 1.2rem;
-		}
-
-		.books-section h2 {
-			font-size: 1.75rem;
 		}
 
 		.books-grid {
 			grid-template-columns: repeat(2, 1fr);
 			gap: 1.5rem;
 		}
-
-		.book-card {
-			padding: 1.75rem;
-		}
-
-		.book-card h3 {
-			font-size: 1.35rem;
-		}
-
-		.badge {
-			font-size: 0.95rem;
-		}
-
-		.author {
-			font-size: 1.15rem;
-		}
 	}
 
 	/* Desktop breakpoint */
 	@media (min-width: 1024px) {
-		.container {
-			max-width: 1000px;
+		main {
 			padding: 3rem 1rem;
+		}
+
+		.books-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.book-card {
+			transition: all 0.3s ease;
+		}
+
+		.book-card:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+			border-color: rgba(255, 255, 255, 0.1);
+		}
+
+		.book-card:hover h3 {
+			color: var(--white);
+		}
+
+		.book-card header {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
 		}
 
 		h1 {
@@ -205,16 +212,6 @@ const stateColors = {
 			font-size: 2rem;
 		}
 
-		.books-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-
-		.book-card header {
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: flex-start;
-		}
-
 		.book-card h3 {
 			font-size: 1.4rem;
 		}
@@ -227,22 +224,12 @@ const stateColors = {
 			font-size: 1.2rem;
 			line-height: 1.6;
 		}
-
-		.book-card:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-			border-color: rgba(255, 255, 255, 0.1);
-		}
-
-		.book-card:hover h3 {
-			color: var(--white);
-		}
 	}
 
 	/* Large desktop breakpoint */
 	@media (min-width: 1280px) {
 		.books-grid {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 </style> 
