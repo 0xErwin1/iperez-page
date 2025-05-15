@@ -137,6 +137,7 @@ This project is open source and available under the [MIT License](LICENSE).
 For any questions or suggestions, feel free to reach out:
 
 - **GitHub**: [0xErwin1](https://github.com/0xErwin1)
+- **GitLab**: [0xErwin](https://gitlab.com/0xErwin)
 - **LinkedIn**: [Ignacio Perez](https://www.linkedin.com/in/ignacio-perez-camejo/)
 
 ---
