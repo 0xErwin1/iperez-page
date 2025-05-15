@@ -10,7 +10,7 @@ export enum Icons {
   SQL = 'nf-md-database',
   LUA = 'nf-md-language_lua',
   C = 'nf-custom-c',
-  'C++' = 'nf-custom-cpp',
+  CPP = 'nf-custom-cpp',
   ZIG = 'nf-seti-zig',
   GO = 'nf-seti-go',
 
@@ -56,7 +56,7 @@ export enum IconsColor {
   PYTHON = 'text-python-color',
   LUA = 'text-lua-color',
   C = 'text-c-color',
-  'C++' = 'text-cpp-color',
+  CPP = 'text-cpp-color',
   ZIG = 'text-zig-color',
   GO = 'text-go-color',
 

@@ -2,9 +2,9 @@
   "name": "Ignacio Perez",
   "label": "Backend developer / Amateur Low-Level Programmer",
   "summary": [
-    "I am a Backend-Oriented Full-Stack Web Developer with a strong focus on Node.js, Express, and TypeScript. While I have experience in frontend development with React.js, my passion lies in backend systems and infrastructure.",
-    "For over three years, Linux has been my primary operating system, and I feel at home navigating and managing Linux environments. My interests extend to low-level programming, systems architecture, and understanding how computers and programming languages work at their core.",
-    "I am always eager to learn and grow, whether by diving into the intricacies of compilers, exploring new programming paradigms, or contributing to robust and efficient software solutions. My ultimate goal is to combine my love for software development with my curiosity for low-level systems to make impactful contributions to the tech world."
+    "I’m a backend-focused full-stack developer who thrives on building solid infrastructure and diving deep into how software and systems actually work. I work mostly with Node.js, Express, and TypeScript, creating APIs and backend services that are easy to maintain, scale, and deploy. While I’ve also done plenty of frontend work using React, I find the backend—and everything behind it—far more compelling.",
+    "Linux has been my daily driver for over five years, not just for development but as a platform I enjoy mastering. Whether it’s managing servers, writing scripts to automate tasks, or understanding how a process interacts with memory, I’m always looking for ways to dig deeper. My interest in systems has led me to write my own programming language in Rust, explore emulation by recreating hardware behavior in C and C++, and even build basic bootloading and I/O routines from scratch. These side projects are not just technical exercises—they reflect how I approach learning: hands-on, iterative, and driven by curiosity.",
+    "I'm always eager to understand the inner workings of the tools I use. That curiosity has shaped the way I write code, design systems, and even how I think about programming in general. Whether it’s exploring compiler internals, refining a CI pipeline, or tweaking low-level hardware behavior, I enjoy every part of the journey from high-level idea to metal."
   ],
   "image": "/profile.webp",
   "email": "ignacio@feuer.me",
@@ -187,6 +187,24 @@
         ]
       },
       {
+        "name": "z80-emulator",
+        "description": "Simple Z80 emulator written in C++",
+        "url": "https://gitlab.com/0xErwin/z80-emulator",
+        "stars": 0,
+        "forks": 0,
+        "language": {
+          "name": "C++",
+          "icon": "CPP"
+        },
+        "visibility": "public",
+        "license": "gpl-3.0",
+        "tags": [
+          "z80-emulator",
+          "emulator",
+          "z80"
+        ]
+      },
+      {
         "name": "dotfiles",
         "description": "My dotfiles repo",
         "url": "https://gitlab.com/0xErwin/dotfiles",
@@ -227,7 +245,7 @@
       {
         "name": "langton.zig",
         "description": "Langton's ant made in Zig and Raylib",
-        "url": "https://gitlab.com/0xErwin/langton.zig",
+        "url": "https://gitlab.com/0xErwin/langton-zig",
         "stars": 0,
         "forks": 0,
         "language": {
