@@ -174,7 +174,12 @@
       {
         "title": "Dive Into DESIGN PATTERNS",
         "author": "Alexander Shvets",
-        "state": "FINISHED"
+        "state": "PENDING"
+      },
+      {
+        "title": "Introduction to Algorithms",
+        "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+        "state": "PENDING"
       }
     ]
   },
